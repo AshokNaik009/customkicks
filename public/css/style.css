@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5,
         padding-left: 0px;
         padding-right: 0px; } }
   .probootstrap-navabr-dark .navbar-nav > .nav-item.probootstrap-cta a {
-    color: #fff; }
+    color: rgb(5, 5, 5); }
   .probootstrap-navabr-dark .navbar-nav > .nav-item.probootstrap-seperator {
     position: relative;
     margin-left: 20px;
@@ -74,6 +74,13 @@ h1, h2, h3, h4, h5,
 .navbar-brand {
   text-transform: uppercase;
   letter-spacing: .1em; }
+
+  @media screen and (max-width: 460px) {
+    
+.probootstrap-navabr-dark .navbar-nav > .nav-item.probootstrap-cta a {
+  color: #fff; }
+}
+
 
 .bg-image, .probootstrap-cover {
   background-size: cover;
@@ -110,7 +117,7 @@ h1, h2, h3, h4, h5,
     position: relative; }
     .probootstrap-cover.overlay:before {
       content: "";
-      background: rgba(0, 0, 0, 0.6);
+      background:transparent;
       position: absolute;
       top: 0;
       left: 0;
