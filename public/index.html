@@ -36,6 +36,54 @@
     <link rel="stylesheet" href="scss/parallax.scss" />
   </head>
   <style>
+    #loader {
+      position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #000000;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
     .custHeight {
       height: 110px;
     }
@@ -197,9 +245,15 @@
 
 
  
-  
-  <body style="background: #fffadc;">
+  <body  onload="myFunction()" style="background: #fffadc;">
+    
+
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom" >
+
    
+
     <nav
       class="sticky navbar navbar-expand-lg navbar-dark bg-dark probootstrap-navabr-dark"
     >
@@ -251,9 +305,9 @@
       </div>
      
     </nav>
-    <div class="marquee">
+    <!-- <div class="marquee">
       <marquee >
-        <!-- <div> -->
+  
           
          <span style="margin-left: 10px;margin-right: 10px;">  <img style="width: 30px;height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png"></span> 
          <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
@@ -349,12 +403,12 @@
         
        
   
-        <!-- </div> -->
+
   
   
       </marquee>
 
-    </div>
+    </div> -->
    
     
     <!-- END nav -->
@@ -500,30 +554,7 @@
       </div>
     </footer> -->
 
-    <!-- loader -->
-    <div id="probootstrap-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#ff555f"
-        />
-      </svg>
-    </div>
+  </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -537,6 +568,17 @@
 
 
 <script>
+
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
 
 $(function () {
     $('.marquee').marquee({
