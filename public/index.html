@@ -1,7 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Custom Kicks</title>
+    <link rel="icon"  href="/public/images/favicon.ico"/>
+    <link rel="icon" href="/public/images/favicon.ico"/>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -34,8 +37,77 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="scss/parallax.scss" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0X7B0TZLP"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X0X7B0TZLP');
+      </script>
   </head>
   <style>
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background: transparent;
+    padding: 5px;
+    width: 400px;
+    height: 350px;
+    margin-top: 30px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    
+}
+
+.colorWhite{
+  color:#fff
+}
+
+.imgDiv {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+/* .flex-item:hover {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+} */
+
+.about:hover {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.flex-item img {
+  max-width: 989px;
+  max-height: 790px;
+}
+
     #loader {
       position: absolute;
   left: 50%;
@@ -95,20 +167,15 @@
     
 
 .detail{
-  background: #000;
+  background: #fff;
+      color: #111111;
     position: relative;
-    top: 480px;
+    top: -637px;
     z-index: 100;
     font-size: 20px;
     padding: 20px;
 }
 
-.marquee {
-  position: relative;
-    top: 90px;
-    z-index: 100;
-    font-size: 20px
-}
 
 .resp {
   display: none;
@@ -139,8 +206,6 @@
    padding: 105px;
 }
 
-
-
 .thirdSection {
   background: #fffadc;
     height: 525px;
@@ -149,7 +214,43 @@
 }
 
 
+.firstImgContainer{
+  padding-top: 440px;
+}
+
+.imgHeight {
+  height: 450px;
+}
+
+.padresp {
+    padding: 0;
+  }
+
+
 @media screen and (max-width: 600px) {
+
+  .firstImgContainer{
+  margin-top: 152px !important;
+  padding-top: 0; 
+}
+
+  .padresp {
+    margin-top: 120px;
+  }
+
+  .imgHeight {
+  height: 320px;
+}
+
+
+  .flex-item img {
+    max-width: 409px;
+    max-height: 573px;
+}
+
+  .hideExtra {
+    display: none;
+  }
 
   .custHeight {
       height: 55px;
@@ -208,9 +309,10 @@
     }
 
     .detail{
-      background: #000;
+      background: #fff;
+      color: #111111;
     position: relative;
-    top: 197px;
+    top: -217px;
     z-index: 100;
     font-size: 20px;
     padding: 20px;
@@ -227,25 +329,13 @@
   background: #fffadc;
 }
 
-.jarallax-keep-img.demo-float-left,
-
-.jarallax-keep-img.demo-float-right {
-
-    margin-right: 0;
-
-    margin-left: 0;
-
-    float: none;
-
-}
-
 }
 
   </style>
 
 
  
-  <body  onload="myFunction()" style="background: #fffadc;">
+  <body  onload="myFunction()" style="background: #111111;">
     
 
     <div id="loader"></div>
@@ -260,7 +350,7 @@
       <div class="container">
         <a class="navbar-brand nonresp" href="index.html">
           <img
-            src="images/customkickslogo1.svg"
+            src="images/customkickres.svg"
             class="img-fluid custHeight"
             alt="logo"
           />
@@ -289,193 +379,92 @@
         <div class="collapse navbar-collapse" id="probootstrap-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a href="index.html"    class="nav-link textColor">Home</a>
+              <a href="index.html"    class="nav-link colorWhite">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#about-us" class="nav-link textColor">About</a>
+              <a href="#about-us" class="nav-link colorWhite">About</a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="#services" class="nav-link textColor">Services</a>
-            </li> -->
             <li class="nav-item">
-              <a href="#contact-us"  class="nav-link textColor">Contact</a>
+              <a href="./typform.html" class="nav-link colorWhite">Contact</a>
             </li>
           </ul>
         </div>
       </div>
      
     </nav>
-    <!-- <div class="marquee">
-      <marquee >
-  
-          
-         <span style="margin-left: 10px;margin-right: 10px;">  <img style="width: 30px;height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png"></span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg"></span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span>  
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://i0.wp.com/www.nicepng.com/png/detail/65-654598_free-vector-puma-logo-logo-puma-vettoriale.png"> </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://www.freepnglogos.com/uploads/vans-logo-png/vans-black-symbol-logo-7.png">  </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://seeklogo.com/images/N/New_Balance-logo-F34722CB97-seeklogo.com.png"> </span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-
-        <span style="margin-left: 10px;margin-right: 10px;">  <img style="width: 30px;height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png"></span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg"></span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span>  
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://i0.wp.com/www.nicepng.com/png/detail/65-654598_free-vector-puma-logo-logo-puma-vettoriale.png"> </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://www.freepnglogos.com/uploads/vans-logo-png/vans-black-symbol-logo-7.png">  </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://seeklogo.com/images/N/New_Balance-logo-F34722CB97-seeklogo.com.png"> </span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-        <span style="margin-left: 10px;margin-right: 10px;">  <img style="width: 30px;height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png"></span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg"></span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span>  
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://i0.wp.com/www.nicepng.com/png/detail/65-654598_free-vector-puma-logo-logo-puma-vettoriale.png"> </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://www.freepnglogos.com/uploads/vans-logo-png/vans-black-symbol-logo-7.png">  </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://seeklogo.com/images/N/New_Balance-logo-F34722CB97-seeklogo.com.png"> </span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-        <span style="margin-left: 10px;margin-right: 10px;">  <img style="width: 30px;height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png"></span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg"></span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span>  
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://i0.wp.com/www.nicepng.com/png/detail/65-654598_free-vector-puma-logo-logo-puma-vettoriale.png"> </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://www.freepnglogos.com/uploads/vans-logo-png/vans-black-symbol-logo-7.png">  </span>
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-         <span style="margin-left: 10px;margin-right: 10px;font-weight: bold;">  <img style="width: 30px;height: 10px;"  src="https://seeklogo.com/images/N/New_Balance-logo-F34722CB97-seeklogo.com.png"> </span>
-
-         <span style="margin-left: 10px;margin-right: 10px;font-size: 25px;color: black;">
-          .
-        </span> 
-
-
-        
-       
-  
-
-  
-  
-      </marquee>
-
-    </div> -->
-   
-    
     <!-- END nav -->
 
-    <section
+
+    <!-- <section
       class="probootstrap-cover overlay"
+    > -->
+    <section
+      class="probootstrap-cover overlay firstImgContainer"
       style="
-        background-image: url('./animation_640_knt1yptx.gif');
+        background-image: url('https://havenshop.com/wp-content/uploads/2017/11/AIR-FORCE-1-07-ROCAFELLA-FW17-November-News-1.gif');
       "
     >
+
+
       <div class="container">
         <div
           class="row align-items-center justify-content-center text-center probootstrap-vh-100"
         >
           <div class="col-md-8">
-            <h1 style="color: black;margin-top: -39%;" class="probootstrap-heading  customHead">Custom Kicks</h1>
-            <p class="detail" style="color: #fff" >
+            <!-- <h1 style="margin-top: -39%;" class="probootstrap-heading  customHead colorWhite">Custom Kicks</h1> -->
+            <p class="detail" style="color: #111111;" >
               Your go to shop for a pair of unique custom sneakers from Nike,
               Adidas, Puma and more created by independent artists from India.
             </p>
-            <!-- <p>
-              <a href="#" target="_blank" class="btn btn-primary">Know More</a>
-            </p> -->
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section style="background: #fffadc;padding-top: 150px;"  class="probootstrap-cover" >
-      <div style="background: #fffadc;height: 380px;background-position: center;background-image: url(https://i.ibb.co/dBXrQy5/7jo-G1r18sq.png);" >
-      </div>
-    </section> -->
-
-    <section   class="probootstrap-cover firstOuterDiv" >
-      <div class="firstSection" >
-      </div>
+    <section style="text-align: center;"  class="padresp" >
+      <img  class="imgHeight"  src="./images/converse.gif"/>
     </section>
 
 
-    <section style="background: #fffadc;"   class="probootstrap-cover" >
-      <div class="secondSection" >
-      </div>
-    </section>
-
-    <section    class="probootstrap-cover  thirdOuterDiv" >
-      <div class="thirdSection" >
-      </div>
+    <section style="text-align: center;"  >
+      <img  class="imgHeight"  src="./images/superstar.gif"/>
     </section>
 
 
 
-    <section style="background: #fffadc;text-align: center;" id="about-us" class="probootstrap-section">
-      <div class="container">
+    <section style="text-align: center;">
+      <img  class="imgHeight" src="./images/airForce.gif"/>
+    </section>
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+    <section style="background: #111111;text-align: center;" id="about-us" class="probootstrap-section ">
+      <div class="container about">
         <div class="row mb-5">
           <div class="col-md-12">
             <div class="border p-5">
               <div class="row">
                 <div class="col-md-4">
-                  <h4>Who are we ?  </h4>
+                  <h4 class="colorWhite" >Who are we ?  </h4>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-7">
-                  <p class="mb-4">
+                  <p  class="colorWhite" class="mb-4">
                     Our motto is to express what we love in what we wear. Come join us on our adventure and explore the world of custom made sneakers. We’re pretty darn excited and you should be too!
                   </p>
                   <p>
-                    <a href="./typform.html" target="_blank"  style="background:black;color: #fff;" class="btn"
+                    <a href="./typform.html" target="_blank"  style="background:rgb(240, 240, 240);color: rgb(20, 20, 20);" class="btn"
                       >How do I Cop ?</a
                     >
                   </p>
